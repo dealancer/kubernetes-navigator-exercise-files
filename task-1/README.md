@@ -10,22 +10,27 @@ Create and build time-backend:v1 docker image that serves traffic over 3000 port
 
 1. Review `Dockerfile`, `app.js`, `package.json`, `package-lock.json` files in `time-backend-app` subdir.
 
-2. To build a container, run following:
+2. Change directory to `time-backend-app`.
+```
+cd task-1/time-backend-app
+```
+
+3. To build a container, run following:
 ```
 docker build . -t time-backend:v1
 ```
 
-3. To test a container, run followng:
+4. To test a container, run followng:
 ```
 docker run -d -p 3000:3000 --name time-backend time-backend:v1
 ```
 
-4. To test an app, run following:
+5. To test an app, run following:
 ```
 curl 127.0.0.1:3000
 ```
 
-5. To stop and remove container, run following:
+6. To stop and remove container, run following:
 ```
 docker stop time-backend
 docker remove time-backend
