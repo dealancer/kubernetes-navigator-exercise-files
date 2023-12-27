@@ -8,7 +8,7 @@ Create and build time-backend:v1 docker image that serves traffic over 3000 port
 
 ### Implementation
 
-1. Review `Dockerfile`, `app.js`, `package.json`, `package-lock.json` files.
+1. Review `Dockerfile`, `app.js`, `package.json`, `package-lock.json` files in `time-backend-app` subdir.
 
 2. To build a container, run following:
 ```
