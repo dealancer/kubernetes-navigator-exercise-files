@@ -4,7 +4,7 @@
 
 ### Objective
 
-Create and build time-backend:v1 docker image that serves traffic over 3000 port returning current timestamp.
+Create, build, and run time-backend:v1 docker image that serves traffic over 3000 port returning current timestamp.
 
 ### Implementation
 
