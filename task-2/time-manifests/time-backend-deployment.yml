@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: time-backend-deployment
+  namespace: time
+  labels:
+    app: time-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: time-backend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: time-backend
+    spec:
+      containers:
+      - name: time-backend
+        image: time-backend:v1
+        ports:
+        - containerPort: 3000
