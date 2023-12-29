@@ -4,7 +4,7 @@
 
 ### Objective
 
-Create `time-backend-deployment.yml` with a deployment configuration for the `time-backend` image and apply this configuration in Kubernetes in `time` namespace.
+Create deployment configuration for the `time-backend:v1` pod and apply this configuration in Kubernetes in `time` namespace.
 
 ### Implementation
 
