@@ -1,4 +1,4 @@
-# kubernetes Navigator Exercise Files
+# Kubernetes Navigator exercise files
 
 ## Task 1
 
