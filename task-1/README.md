@@ -20,17 +20,17 @@ cd task-1/time-backend-app
 docker build . -t time-backend:v1
 ```
 
-4. To test a container, run followng:
+4. Run a container:
 ```
 docker run -d -p 3000:3000 --name time-backend time-backend:v1
 ```
 
-5. To test an app, run following:
+5. Test an app:
 ```
 curl 127.0.0.1:3000
 ```
 
-6. To stop and remove container, run following:
+6.Stop and remove container:
 ```
 docker stop time-backend
 docker remove time-backend

@@ -1,0 +1,14 @@
+{
+  "name": "time-frontend-app",
+  "version": "1.0.0",
+  "description": "Gets a timestamp and displays it in human readable format",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}
