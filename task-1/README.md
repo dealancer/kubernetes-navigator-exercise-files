@@ -4,18 +4,18 @@
 
 ### Objective
 
-Build `time-backend:v1`` docker image that serves traffic over 3000 port returning current timestamp. Run image as a container.
+Build `time-backend:v1` docker image that serves traffic over 3000 port returning current timestamp. Run image as a container.
 
 ### Implementation
 
 1. Review `Dockerfile`, `app.js`, `package.json`, `package-lock.json` files in `task-1/time-backend-app` subdir.
 
-2. Change directory to `task-1/time-backend-app`.
+2. Change directory to `task-1/time-backend-app`:
 ```
 cd task-1/time-backend-app
 ```
 
-3. To build a container, run following:
+3. Build an image:
 ```
 docker build . -t time-backend:v1
 ```
