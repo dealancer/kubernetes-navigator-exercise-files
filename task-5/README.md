@@ -30,7 +30,7 @@ docker run -d -p 3001:3000 --name time-frontend --env TIME_BACKEND_URL=http://ho
 curl 127.0.0.1:3001
 ```
 
-6. Stop and remove container, run following:
+6. Stop and remove container:
 ```
 docker stop time-frontend
 docker remove time-frontend
