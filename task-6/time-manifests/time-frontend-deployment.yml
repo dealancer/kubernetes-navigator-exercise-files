@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: time-frontend-deployment
+  namespace: time
+  labels:
+    app: time-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: time-frontend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: time-frontend
+    spec:
+      containers:
+      - name: time-frontend
+        image: time-frontend:v1
+        ports:
+        - containerPort: 3000
+        env: # Set environment variables
+          - name: TIME_BACKEND_URL
+            valueFrom:
+              configMapKeyRef:
+                name: time-frontend-configmap
+                key: time_backend_url
