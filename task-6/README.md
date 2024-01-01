@@ -1,6 +1,6 @@
 # Kubernetes Navigator exercise files
 
-## Task 5
+## Task 6
 
 ### Objective
 
