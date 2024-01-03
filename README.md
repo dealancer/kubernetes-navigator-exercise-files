@@ -24,7 +24,8 @@ git clone https://github.com/dealancer/kubernetes-navigator-exercise-files.git
 4. Task 4 - create a service for the backend service.
 5. Task 5 - build a Docker image for the frontend service.
 6. Task 6 - create config map, deployment, and service cofiguration for the frontend service.
-7. Task 7 - cleanup resources.
+7. Task 7 - create persistent volume and persistent volume claim configuration for the frontend service.
+8. Task 8 - cleanup resources.
 
 ## Feedback
 
