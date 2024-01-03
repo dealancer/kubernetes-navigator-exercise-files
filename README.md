@@ -11,7 +11,9 @@ https://docs.google.com/presentation/d/1ivFPB20d7CLTFycQo8X8DbvrcWtngsm2lvuu6F1O
 1. Install Git: https://git-scm.com/download/.
 2. Install Docker Desktop: https://www.docker.com/products/docker-desktop/.
 3. Enable Kubernetes in the Docker Desktop settings.
-4. Clone this repository:
+4. Make sure `docker-desktop` context is selected as a default context in Docker Desktop settings.
+5. Verify `kubectl` is working by running `kubectl get nodes`.
+6. Clone this repository:
 ```
 git clone https://github.com/dealancer/kubernetes-navigator-exercise-files.git
 ```
