@@ -8,7 +8,7 @@ Create Config Map, Deployment, and Service resources for `time-frontend` compone
 
 ### Implementation
 
-1. Review `time-frontend-configmap.yml`, `time-frontend-deployment.yml`, `time-frontend-service.yml` files in `task-6/time-frontend-app` subdir.
+1. Review `time-frontend-configmap.yml`, `time-frontend-deployment.yml`, `time-frontend-service.yml` files in `task-6/time-manifests` subdir.
 
 2. Change directory to `task-6/time-manifests`:
 ```
