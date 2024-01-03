@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: time-frontend-configmap
+  namespace: time
+data:
+  time_backend_url: "http://time-backend-service:3000"

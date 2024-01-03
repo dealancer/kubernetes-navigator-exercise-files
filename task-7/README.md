@@ -1,32 +1,37 @@
 # Kubernetes Navigator exercise files
 
-## Task 7
+## Task 6
 
 ### Objective
 
-Cleanup Kubernetes and Docker resources.
+Create local PV and PVC resources and mount a volume to the `time-frontend` pod.
+
 
 ### Implementation
 
-1. Delete `time` namespace.
+1. Review `time-frontend-pv.yml`, `time-frontend-pvc.yml`, and `time-frontend-deployment.yml` files in `task-7/time-manifests` subdir and review `task-7/files` subdir.
+
+2. Change directory to `task-7/time-manifests`:
 ```
-kubectl delete namespace time
+cd task-7/time-manifests
 ```
 
-2. Verify that all resources have been deleted from `time` namespace.
+3. Replace `<ABSOLUTE-PATH-TO-FILES>` with the absolute path to `task-7/files` directory in `task-7/time-manifests` subdir.
+
+4. Apply configurations:
 ```
-kubectl get all -n time
+kubectl apply -f time-frontend-pv.yml
+kubectl apply -f time-frontend-pvc.yml
+kubectl apply -f time-frontend-deployment.yml
 ```
 
-3. Stop and delete Docker cotainers.
+5. Get pod name of time-frontend app:
 ```
-docker stop time-backend
-docker remove time-backend
-docker stop time-frontend
-docker remove time-frontend
+POD=$(kubectl get pod -l app=time-frontend -n time -o jsonpath="{.items[0].metadata.name}")
+echo $POD
 ```
 
-4. Verify that all Docker containers has been deleted.
+6. Verify that you can see a file in the mounted volume to the pod:
 ```
-docker ps
+kubectl exec -ti $POD -n time -- cat /home/node/app/files/example.txt
 ```
